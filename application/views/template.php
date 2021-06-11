@@ -12,13 +12,11 @@
     <link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url('assets/xtreme-admin-lite/assets/images/favicon.png');?>">
     <title>Xtreme Admin Template - The Ultimate Multipurpose admin template</title>
     <!-- Custom CSS -->
-    <link href="<?php echo base_url('assets/xtreme-admin-lite');?>/dist/css/style.min.css" rel="stylesheet">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
+    <link href="<?php echo base_url('assets/xtreme-admin-lite');?>/dist/css/style.css" rel="stylesheet">
+<script src="https://kit.fontawesome.com/9ce3d7ffeb.js" crossorigin="anonymous"></script>
+<link href="<?php echo base_url('assets/xtreme-admin-lite');?>/dist/css/icons/material-design-iconic-font/css/materialdesignicons.min.css" rel="stylesheet">
+
+
 </head>
 
 <body>
@@ -40,16 +38,11 @@
         <!-- ============================================================== -->
         <header class="topbar" data-navbarbg="skin5">
             <nav class="navbar top-navbar navbar-expand-md navbar-dark">
-                <div class="navbar-header" data-logobg="skin5">
+                <div class="navbar-header ml-5 mt-2" data-logobg="skin5">
                     <!-- ============================================================== -->
                     <!-- Logo -->
                     <!-- ============================================================== -->
-							<h4 class="text-white">Nabiel Izzullah Pansuri</h4>
-						<h5 class="text-white">19.01.4419</h5>
-                    <!-- ============================================================== -->
-                    <!-- End Logo -->
-                    <!-- ============================================================== -->
-                    <!-- This is for the sidebar toggle which is visible on mobile only -->
+							<h4 class="text-white">Nabiel Izzullah Pansuri - 19.01.4419</h4> 
                     <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
                 </div>
                 <!-- ============================================================== -->
@@ -63,11 +56,7 @@
                         <!-- ============================================================== -->
                         <!-- Search -->
                         <!-- ============================================================== -->
-                        <li class="nav-item search-box"> <a class="nav-link waves-effect waves-dark" href="javascript:void(0)"><i class="ti-search"></i></a>
-                            <form class="app-search position-absolute">
-                                <input type="text" class="form-control" placeholder="Search &amp; enter"> <a class="srh-btn"><i class="ti-close"></i></a>
-                            </form>
-                        </li>
+                        
                     </ul>
                     <!-- ============================================================== -->
                     <!-- Right side toggle and nav items -->
@@ -126,14 +115,14 @@
                             </div>
                             <!-- End User Profile-->
                         </li>
-                        <li class="p-15 m-t-10"><a href="#" onclick="loadMenu('http://localhost/backend/barang')" class="btn btn-block create-btn text-white no-block d-flex align-items-center"><i class="fa fa-plus-square"></i> <span class="hide-menu m-l-5">Barang</span> </a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="pages-profile.html" aria-expanded="false"><i class="mdi mdi-account-network"></i><span class="hide-menu">Departemen</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="table-basic.html" aria-expanded="false"><i class="mdi mdi-border-all"></i><span class="hide-menu">Pengadaan</span></a></li>
+                        <li class="p-15 m-t-10"><a href="#" onclick="loadMenu('http://localhost/ci3/barang')" class="btn btn-block create-btn text-white no-block d-flex align-items-center"><i class="fa fa-plus-square"></i> <span class="hide-menu m-l-5">Barang</span> </a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="pages-profile.html" aria-expanded="false"><i class="fa fa-plus-square"></i><span class="hide-menu">Departemen</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="table-basic.html" aria-expanded="false"><i class="fa fa-plus-square"></i><span class="hide-menu">Pengadaan</span></a></li>
                         <!-- User Profile-->
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="icon-material.html" aria-expanded="false"><i class="mdi mdi-face"></i><span class="hide-menu">Peminjaman</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="starter-kit.html" aria-expanded="false"><i class="mdi mdi-file"></i><span class="hide-menu">Pengembalian</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="error-404.html" aria-expanded="false"><i class="mdi mdi-alert-outline"></i><span class="hide-menu">Laporan Tahunan</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="index.html" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Laporan Stok</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="icon-material.html" aria-expanded="false"><i class="fa fa-plus-square"></i><span class="hide-menu">Peminjaman</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="starter-kit.html" aria-expanded="false"><i class="fa fa-plus-square"></i><span class="hide-menu">Pengembalian</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="error-404.html" aria-expanded="false"><i class="fa fa-plus-square"></i><span class="hide-menu">Laporan Tahunan</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="index.html" aria-expanded="false"><i class="fa fa-plus-square"></i><span class="hide-menu">Laporan Stok</span></a></li>
 						<li class="text-center p-40 upgrade-btn">
                             <a href="https://wrappixel.com/templates/xtremeadmin/" class="btn btn-block btn-danger text-white" target="_blank">Upgrade to Pro</a>
                         </li>
@@ -236,7 +225,7 @@
 					$('.page-breadcrumb .page-title').html(objData.titel)
 				},
 				error:function(jqXHR, textStatus, errorMsg) {
-					alert('error')
+					alert('Error')
 				}
 			})
 		}

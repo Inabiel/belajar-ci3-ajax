@@ -14,33 +14,26 @@ class Barang extends CI_Controller {
 
 		echo json_encode($data);
 	}
-	
-	public function list_barang(){
-		$this->load->database();
-		$this->load->model('Barang_model');
-		$data_barang = $this->Barang_model->get_barang();
-		$konten = '<tr>
-				   <td>nama</td>
-				   <td>Deskripsi</td>
-				   <td>Stok</td>
-				   <td>aksi</td>
-				   </tr>
-		';
 
-		foreach ($data_barang->result() as $key=>$value){
-			$konten .= '<tr>
-						<td>'.$value->nama_barang.'</td>
-						<td>'.$value->deskripsi.'</td>		
-						<td>'.$value->stok.'</td>
-						<td>Read | Hapus | Edit</td>
-					</tr>
-			';
-		}
-
-		$data_json=array(
-			'konten'=>$konten
+	// Nabiel Izzullah Pansuri - 19.01.4419
+	public function form_create() {
+		$data_view = array('titel'=>'Form Data Barang Baru');
+		$konten = $this->load->view('barang/form_barang', $data_view, true);
+		$data_json = array(
+			'konten' => $konten,
+			'titel' => 'Form Data Barang Baru',
 		);
+		echo json_encode($data_json);
+	}
 
+	public function form_edit($id_barang) {
+		$data_view = array('titel'=>'Form Edit Data Barang', 'id_barang' => $id_barang);
+		$konten = $this->load->view('barang/form_barang', $data_view, true);
+		$data_json = array(
+			'konten' => $konten,
+			'titel' => 'Form Edit Data Barang',
+			'id_barang' => $id_barang,
+		);
 		echo json_encode($data_json);
 	}
 }
