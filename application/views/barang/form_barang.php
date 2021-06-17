@@ -51,12 +51,12 @@ form-control-line form-user-input" name="nama_barang" id="nama_barang">
 	</div>
 </div>
 <script type="text/javascript">
-	$('#formBarang').on('submit', (e) => {
+	$('#formBarang').on('submit', function(e){
 		e.preventDefault();
 		sendDataPost()
 	})
 
-	const sendDataPost = () => {
+	var sendDataPost = () => {
 		<?php
 		if ($titel == 'Form Edit Data Barang') {
 			echo "var link = 'http://localhost/ci3-backend/barang/update_action';";
@@ -64,9 +64,8 @@ form-control-line form-user-input" name="nama_barang" id="nama_barang">
 			echo "var link = 'http://localhost/ci3-backend/barang/create_action';";
 		}
 		?>
-		let dataForm = {};
-		let allInput = $('.form-user-input');
-		console.log(allInput)
+		var dataForm = {};
+		var allInput = $('.form-user-input');
 		$.each(allInput, function(i, val) {
 			dataForm[val['name']] = val['value'];
 		})
@@ -74,7 +73,7 @@ form-control-line form-user-input" name="nama_barang" id="nama_barang">
 			type: 'POST',
 			data: dataForm,
 			success: function(data, status, xhr) {
-				let data_str = JSON.parse(data);
+				var data_str = JSON.parse(data);
 				alert(data_str['pesan']);
 				loadMenu('<?= base_url('barang') ?>');
 			},
